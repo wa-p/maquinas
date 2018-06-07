@@ -1,0 +1,12 @@
+import { Meteor } from 'meteor/meteor';
+import '../imports/API/equipos.js';
+
+Meteor.startup(() => {
+  // code to run on server at startup
+
+var usd = EthTools.ticker.findOne("usd");
+
+if (usd) console.log(usd.price); // "2.0000"
+});
+
+

@@ -1,0 +1,46 @@
+
+
+<body>
+
+
+  <div class="container">
+
+    <header>
+
+      <h1> {{#if currentUser}} Equipos de {{currentUser.emails.[0].address}} {{else}} Sesión no iniciada{{/if}}</h1>
+
+    </header>
+
+
+
+ {{#if currentUser}}
+
+    <ul>
+
+      {{#each equipos}}
+
+        {{> equipo}}
+
+      {{/each}}
+
+    </ul>
+
+{{/if}}
+
+  </div>
+<div class="container login" style="float:right;position:fixed;margin-left:40px;margin-top:-50px;min-height:auto">
+	{{> loginButtons}}
+</div>
+
+</body>
+
+ 
+
+<template name="equipo">
+
+  <li>{{text}}</li>
+
+</template>
+
+
+
