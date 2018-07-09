@@ -12,6 +12,11 @@
             <span class="icon-bar"></span>
           </button-->
           <a class="navbar-brand" href="#">Monitor</a>
+
+
+          {{#each prices}}
+            {{> price}}
+          {{/each}}
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -32,7 +37,7 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active js-user" data-valor="null"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
 			     <!-- LISTA DE USUARIOS -->
            {{#each users}}
           {{> user }}
@@ -112,8 +117,12 @@
 
 <template name="user">
       {{#each emails}}
-  <li class="list-group-item js-user">{{this.address}} </li>
+  <li class="list-group-item js-user" data-valor="{{this.address}}">{{this.address}} </li>
     {{/each}}
-
 </template>
+
+<template name='price'>
+    <a class="navbar-brand" href="#">{{NAME}}:{{USD}}</a>
+</template>
+
 
