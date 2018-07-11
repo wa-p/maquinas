@@ -1,6 +1,12 @@
 import { Meteor } from 'meteor/meteor';
 import '../imports/API/equipos.js';
 
+import { Accounts } from 'meteor/accounts-base'
+
+// Accounts.config({
+//     loginExpirationInDays: 0.005
+// })
+
 Meteor.startup(() => {
   // code to run on server at startup
 

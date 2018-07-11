@@ -25,24 +25,7 @@ if (Meteor.isServer) {
  Meteor.publish('getPrice', function() {
     var self = this;
     var init = true;
-    /*
-    try {
-      var res = HTTP.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD', {});
-
-      var item = JSON.parse(res.content);
-      
-     
-	
-      self.added('price', 1, {USD: item.BTC.USD,NAME:'BTC'});
-      self.added('price', 2, {USD: item.LTC.USD,NAME:'LTC'});
-      self.added('price', 3, {USD: item.ETH.USD,NAME:'ETH'});
-		
-      self.ready();
-    } catch(error) {
-      console.log(error);
-    }
-
-*/
+    
 
 
 		Meteor.setInterval(function() {
